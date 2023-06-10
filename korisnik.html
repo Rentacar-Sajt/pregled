@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Rent a car Website </title>
+	<link rel="stylesheet" href="style2.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+</head>
+
+<body>
+
+	<header>
+		<a href="#" class="logo"><img src="racing-car.png" alt=""></a>
+
+		<div class="bx bx-menu" id="menu-icon"></div>
+
+		<ul class="navbar">
+			<li><a href="Rentacar.html">Home</a></li>
+			<li><a href="vozila.html">Vozila</a></li>
+			<li><a href="#o nama">O nama</a></li>
+			
+			<li><a href="#recenzije">Recenzije</a></li>
+		</ul>
+
+		<div class="header-btn">
+			<a href="#" class="Sign-up">Sign up</a>
+			<a href="#" class="Sign-in">Sign in</a>
+		</div>
+
+	</header>
+	<section class="home" id="home">
+		<div class="text">
+			<h1><span>Unesite svoje podatke</span></h1>
+		</div>	
+		
+
+		<div class="form-container">
+			<form action="">
+				<div class="input-box">
+					<span>Lokacija</span>
+					<input type="search" name="" id="" placeholder="Pretrazi mesta">
+				</div>
+				<div class="input-box">
+					<span>Datum preuzimanja</span>
+					<input type="date" name="" id="">
+				</div>
+
+				<div class="input-box">
+					<span>Datum vracanja</span>
+					<input type="date" name="" id="">
+				</div>
+				<div class="input-box">
+					<span>Ime</span>
+					<input type="text" name="" id="" placeholder="Vase ime">
+				</div>
+				<div class="input-box">
+					<span>Prezime</span>
+					<input type="text" name="" id="" placeholder="Vase prezime">
+				</div>
+				<div class="input-box">
+					<span>Broj licne karte</span>
+					<input type="password" name="" id="" placeholder="Broj lk">
+				</div>
+				<div class="input-box">
+					<span>Broj telefona</span>
+					<input type="tel" name="" id="" placeholder="Broj telefona">
+				</div>
+				</div>
+				
+				<div class="container">
+					<button type="submit" class="btn" onclick="openPopup()">Rezervisi</button>
+					<div class="popup" id="popup">
+						<img src="check.png" alt="">
+						<h2>Hvala na poverenju</h2>
+						<p>Uspesno ste rezervisali vozilo</p>
+						<button type="button" onclick="closePopup()">Zatvori</button>
+					</div>
+					
+				</div>
+
+			</form>
+		</div>
+
+	</section>
+
+	<script src="main.js"></script>
+	<script>
+		let popup = document.getElementById("popup");
+		function openPopup(){
+			popup.classList.add("open-popup");
+		}
+		function closePopup(){
+			popup.classList.remove("open-popup");
+		}
+	</script>
+</body>
+
+</html>

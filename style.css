@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap");
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-padding-top: 2rem;
+	scroll-behavior: smooth;
+	list-style: none;
+	text-decoration: none;
+
+	font-family: "Instrument Serif", serif;
+}
+:root {
+	--main-color: #0000ff;
+	--second-color: #ff0000;
+	--text-color: #000000;
+	--gradient: linear-gradient(#0000ff, #ff0000);
+}
+html::-webkit-scrollbar {
+	width: 0;
+}
+html::-webkit-scrollbar-track {
+	background: transparent;
+}
+html::-webkit-scrollbar-thumb {
+	background: var(--main-color);
+	border-radius: Srem;
+}
+section {
+	padding: 50px 100px;
+}
+header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	right: 0;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: #eeeff1;
+	padding: 15px 100px;
+}
+.logo img {
+	width: 40px;
+}
+.navbar {
+	display: flex;
+}
+.navbar li {
+	position: relative;
+}
+.navbar a {
+	font-size: 1rem;
+	padding: 10px 20px;
+	color: var(--text-color);
+	font-weight: 500;
+}
+.navbar a::after {
+	content: "";
+	width: 0;
+	height: 3px;
+	background: var(--gradient);
+	position: absolute;
+	bottom: -4px;
+	left: 0;
+	transition: 0.5s;
+}
+.navbar a:hover::after {
+	width: 100%;
+}
+#menu-icon {
+	font-size: 24px;
+	cursor: pointer;
+	z-index: 10001;
+	display: none;
+}
+.header-btn a {
+	padding: 10px 20px;
+	color: var(--text-color);
+	font-weight: 500;
+}
+.header-btn .Sign-in {
+	background: #b22222;
+	color: #ffffff;
+	border-radius: 0.5rem;
+}
+.header-btn .Sign-in:hover {
+	background: var(--main-color);
+}
+.home {
+	width: 100%;
+	min-height: 100vh;
+	position: relative;
+	background: url(https://wallpapercave.com/wp/wp2257415.jpg);
+	background-repeat: no-repeat;
+	background-position: center right;
+	background-size: cover;
+	display: grid;
+	align-items: center;
+	grid-template-columns: repeat(2, 1fr);
+}
+.text h1 {
+	font-size: 3.5rem;
+	letter-spacing: 2px;
+}
+.text span {
+	color: var(--main-color);
+}
+.text p {
+	font-size: 1.5rem;
+	margin: 00.5rem 0 1rem;
+}
+.app-stores {
+	display: flex;
+}
+.app-stores img {
+	width: 100px;
+	margin-right: 1rem;
+	cursor: pointer;
+}
+.form-container form {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 1rem;
+	position: absolute;
+	bottom: 4rem;
+	left: 100px;
+	background: #dcdcdc;
+	padding: 20px;
+	border-radius: 0.5rem;
+}
+.input-box {
+	flex: 1 1 7rem;
+	display: flex;
+	flex-direction: column;
+}
+.input-box span {
+	font-weight: 500;
+}
+.input-box input {
+	padding: 7px;
+	outline: none;
+	border: none;
+	background: #eeeff1;
+	border-radius: 0.5rem;
+	font-size: 1rem;
+}
+.form-container form .btn {
+	flex: 1 1 7rem;
+	padding: 10px 34px;
+	border: none;
+	border-radius: 0.5rem;
+	background: #b22222;
+	color: #fff;
+	font-size: 1rem;
+	font-weight: 500;
+}
+.form-container form .btn:hover {
+	background: var(--main-color);
+}
+ .heading span{
+	font-size: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--main-color);	
+}
+.heading h1{
+	font-size: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+}
+
+.o-nama-container{
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	margin-top: 2rem;
+	align-items: center;
+	gap: 1rem;
+	margin-top: 1rem;
+}
+.o-nama-img img{
+	width: 100%;
+}
+.o-nama-text span{
+	font-weight: 500;
+	font-size: 1.5rem;
+	color:var(--main-color);
+	text-transform: uppercase;
+}
+.o-nama-text p{
+	margin: 0.5rem 0 1.4rem;
+	font-size: 1.2rem;
+}
+.o-nama-text .btn{
+	padding: 10px;
+	background: #b22222;
+	color: #eeeff1;
+	border-radius: 0.5rem;
+}
+.o-nama-text .btn:hover{
+	background: var(--main-color);
+}
+.recenzije-container{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+	gap: 1rem;
+	margin-top: 2rem;
+}
+.rec-img{
+	width: 70px;
+	height: 70px;
+}
+.rec-img img{
+	width: 100%;
+	height: 100%;
+	border-radius: 50% ;
+	object-fit: cover;
+	object-position: center;
+	border: 2px solid var(--second-color);
+}
+.recenzije-container .box{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: 20px;
+	box-shadow: 1px 4px 41px rgba(0, 0, 0, 0.1);
+}
+.recenzije-container .box h2{
+	font-size: 1.1rem;
+	font-weight: 600;
+	margin: 0.5rem 0 0.5rem;
+}
+.recenzije-container .box p{
+	font-style: italic;
+}
+.recenzije-container .box .zvezde .bx{
+	color: var(--main-color);
+
+}

@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap");
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-padding-top: 2rem;
+	scroll-behavior: smooth;
+	list-style: none;
+	text-decoration: none;
+
+	font-family: "Instrument Serif", serif;
+}
+:root {
+	--main-color: #ffffff;
+	--second-color: #ff0000;
+	--text-color: #000000;
+	--gradient: linear-gradient(#0000ff, #ff0000);
+}
+html::-webkit-scrollbar {
+	width: 0;
+}
+html::-webkit-scrollbar-track {
+	background: transparent;
+}
+html::-webkit-scrollbar-thumb {
+	background: var(--main-color);
+	border-radius: Srem;
+}
+section {
+	padding: 50px 100px;
+}
+header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	right: 0;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: #eeeff1;
+	padding: 15px 100px;
+}
+.logo img {
+	width: 40px;
+}
+.navbar {
+	display: flex;
+}
+.navbar li {
+	position: relative;
+}
+.navbar a {
+	font-size: 1rem;
+	padding: 10px 20px;
+	color: var(--text-color);
+	font-weight: 500;
+}
+.navbar a::after {
+	content: "";
+	width: 0;
+	height: 3px;
+	background: var(--gradient);
+	position: absolute;
+	bottom: -4px;
+	left: 0;
+	transition: 0.5s;
+}
+.navbar a:hover::after {
+	width: 100%;
+}
+#menu-icon {
+	font-size: 24px;
+	cursor: pointer;
+	z-index: 10001;
+	display: none;
+}
+.header-btn a {
+	padding: 10px 20px;
+	color: var(--text-color);
+	font-weight: 500;
+}
+.header-btn .Sign-in {
+	background: #b22222;
+	color: #ffffff;
+	border-radius: 0.5rem;
+}
+.header-btn .Sign-in:hover {
+	background: blue;
+}
+.home {
+	width: 100%;
+	min-height: 100vh;
+	position: relative;
+	background: url(https://www.michalsons.com/wp-content/uploads/2018/06/sign-contracts-e1561620965475.jpg);
+	background-repeat: no-repeat;
+	background-position: center right;
+	background-size: cover;
+	display: grid;
+	align-items: center;
+	grid-template-columns: repeat(2, 1fr);
+}
+.text h1 {
+	font-size: 4rem;
+	letter-spacing: 2px;
+}
+.text span {
+	color: var(--main-color);
+	display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 5rem;
+}
+.text p {
+	margin: 00.5rem 0 1rem;
+}
+.app-stores {
+	display: flex;
+}
+.app-stores img {
+	width: 100px;
+	margin-right: 1rem;
+	cursor: pointer;
+}
+.form-container form {
+	display:contents;
+	flex-wrap:initial;
+	align-items: center;
+	gap: 1rem;
+	position:fixed;
+	bottom: 1rem;
+	left: 70px;
+	background: #dcdcdc;
+	padding: 20px;
+	border-radius: 2rem;
+}
+
+.input-box {
+	flex: 1 1 7rem;
+	display: flex;
+	flex-direction: column;
+}
+.input-box span {
+	font-size: 1.2rem;
+}
+.input-box input {
+	padding: 7px;
+	outline: none;
+	border: none;
+	background: #eeeff1;
+	border-radius: 0.5rem;
+	font-size: 1.5rem;
+}
+.form-container form .btn:hover {
+	background: blue;
+}
+
+
+.btn {
+	padding: 10px 60px;
+	background: #b22222;
+	border: 0;
+	outline: none;
+	cursor: pointer;
+	font-size: 22px;
+	font-weight: 500;
+	border-radius: 30px;
+}
+.popup{
+	width: 400px;
+	background: #eeeff1;
+	border-radius: 6px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%) scale(0.1);
+	text-align: center;
+	padding: 0 30px 30px;
+	color: #0000ff;
+	visibility: hidden;
+	transition: transform 0.4s, top 0.4s;
+}
+.open-popup{
+	visibility: visible;
+	top: 50%;
+	transform: translate(-50%,-50%) scale(1);
+}
+.popup img{
+	width: 100px;
+	margin-top: -50px;
+	border-radius: 50px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.popup h2{
+	font-size: 38px;
+	font-weight: 500;
+	margin: 30px 0 10px;
+}
+.popup button{
+	width: 100%;
+	margin-top: 50px;
+	padding: 10px 0;
+	background: #b22222;
+	color: #eeeff1;
+	border: 0;
+	outline:none ;
+	font-size: 18px;
+	border-radius: 4px;
+	cursor: pointer;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+}
